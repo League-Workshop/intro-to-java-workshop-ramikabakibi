@@ -7,8 +7,15 @@ import javax.swing.ImageIcon;
 public class DragonFight {
 	// 1. Create a main method and put all of the code below inside of it
 	public static void main(String[] args) {
-		
-		ImageIcon dragon = new ImageIcon("src/section4/dragonPicture.jpg");		
+		int playerhealth = 100;
+		int dragonhealth = 100;
+		int playersdamage;
+		int dragonsdamage;
+		while(playerhealth>0 && dragonhealth>0) {
+			Random i = new Random();
+			int h =	i.nextInt(10);
+		String s = JOptionPane.showInputDialog("Do you want the dragon to attack with a yell or a kick?");
+			ImageIcon dragon = new ImageIcon("src/section4/dragonPicture.jpg");		
 		
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 		// 2. Create a variable called "playerHealth" to store your health (set it equal to 100)
@@ -62,4 +69,4 @@ public class DragonFight {
 			
 		}
 	}
-
+}
